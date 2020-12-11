@@ -21,9 +21,9 @@
 6. finally based on user interest/option the program will close older web window or closes whole web browser & destroys the session.
 
    - driver.close :
-   	
-   	 only the window that has focus is closed
+   	     
+         only the window that has focus is closed
    	
    - driver.quit : 
    	
-   	used to exit the browser, end the session, tabs, pop-ups etc.
+         used to exit the browser, end the session, tabs, pop-ups etc.
