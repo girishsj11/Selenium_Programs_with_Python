@@ -1,4 +1,4 @@
-### close_And_quit_Actions onto Web page by using selenium+python
+### Close_And_Quit_Actions onto Web page by using selenium+python
 
 1. load the packages
 
