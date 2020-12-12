@@ -22,7 +22,7 @@
 
    - driver.close :
    	     
-         only the window that has focus is closed
+         only the window that has focus is closed or in a simple words it will closes the parent web window.
    	
    - driver.quit : 
    	
