@@ -25,4 +25,5 @@
    - element.optiosn :
    	
      - It will listsout all the options which is present at the drop_down element position.
-     	***Note*** : It will displays the default option too (ex: Select Skills)
+     	
+         ***Note*** : It will displays the default option too (ex: Select Skills)
