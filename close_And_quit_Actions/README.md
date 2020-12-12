@@ -1,4 +1,6 @@
-### Close_And_Quit_Actions onto Web page by using selenium+python
+## Close_And_Quit_Actions onto Web page by using selenium+python
+
+### Basic_Commands on web browser
 
 1. load the packages
 
