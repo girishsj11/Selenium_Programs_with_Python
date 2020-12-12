@@ -71,6 +71,8 @@ Using Selenium code with Python to automate the WebBrowser stuffs
 
 ## Forward and Backward actions on Web page by using selenium+python
 
+### Navigation_Commands on Web browser
+
 1. load the packages
 
    - selenium.webdriver
@@ -92,6 +94,8 @@ Using Selenium code with Python to automate the WebBrowser stuffs
 
 
 ## Close_And_Quit_Actions onto Web page by using selenium+python
+
+### Basic_Commands on web browser
 
 1. load the packages
 
