@@ -20,17 +20,13 @@ print(driver.title)
 driver.find_element_by_name("q").send_keys("Automation testing")
 driver.find_element_by_name("q").send_keys(Keys.ENTER)
 
-print(driver.title)
-
-driver.back()
-
-print(driver.title)
-
-driver.forward()
-
-print(driver.title)
-
-driver.close()
+for _ in range(4):
+  print(driver.title) #gets the web title 
+  driver.back() #moves back to the older history & opens the page
+  print(driver.title) #gets the web title 
+  driver.forward() #moves forward to the new page which is stored in history & opens the page
+  
+driver.close() #ends the browser actions here 
 
 
 
