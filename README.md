@@ -38,6 +38,14 @@
       
             driver.manage().timeouts().implicitlyWait(Time Interval to wait for, TimeUnit.SECONDS);
             
+            or
+            
+            from selenium import webdriver
+            driver = webdriver.Firefox()
+            driver.implicitly_wait(10) # seconds
+            driver.get("http://somedomain/url_that_delays_loading")
+            myDynamicElement = driver.find_element_by_id("myDynamicElement")
+            
      *Explicit Wait() :*
      
       - An explicit wait is a code you define to wait for a certain condition to occur before proceeding further in the code. The extreme case of this is time.sleep(), which sets the condition to an exact time period to wait. There are some convenience methods provided that help you write code that will wait only as long as required. WebDriverWait in combination with ExpectedCondition is one way this can be accomplished.
