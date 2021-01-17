@@ -1,6 +1,19 @@
 # Selenium_with_Python_Programs
 Using Selenium code with Python to automate the WebBrowser stuffs
 
+# Selenium :
+
+  ***Selenium is a free/open-source automated testing framework to validate a web applications across the different browsers & platofrms. we can create a selenium test code with help of any scripting langauage like python,java, C#,ruby etc...***
+  
+  **List of tools:**
+  
+  1. Selenium Integrated Development Environment (IDE)
+  2. Selenium Remote Control (RC)
+  3. WebDriver
+  4. Selenium Grid
+  
+  ![Selenium_Tools](https://www.guru99.com/images/SeleniumSuite.png)
+
 
 ## ***Video_database_collection_from_Youtube_using-Selenium-Python***
 
