@@ -22,7 +22,7 @@
      
       Sleep is a static method that belongs to the thread class. This method can be called using the reference of the class name i.e Thread. If you use Thread.sleep while performing automation testing with Selenium, then this method will stop the execution of the script for the specified duration of time, irrespective of whether the element is found or not on the web page. It accepts the time duration in milliseconds. The syntax for the same is:
 
-            > Thread.sleep(3000);
+            Thread.sleep(3000);
          
      - Selenium Webdriver waits for the specified time, irrespective of the element is found or not. In case the element is found much before the specified duration, the script will still wait for the time duration to elapse, thereby increasing the execution time of the script.
      
@@ -36,15 +36,15 @@
       
       - It does not wait for the complete duration of time. In case it finds the element before the duration specified, it moves on to the next line of code execution, thereby reducing the time of script execution. This is why Implicit wait is also referred to as dynamic wait. If it does not find the element in the specified duration, it throws ElementNotVisibleException.
       
-            > driver.manage().timeouts().implicitlyWait(Time Interval to wait for, TimeUnit.SECONDS);
+            driver.manage().timeouts().implicitlyWait(Time Interval to wait for, TimeUnit.SECONDS);
             
      *Explicit Wait() :*
      
       - An explicit wait is a code you define to wait for a certain condition to occur before proceeding further in the code. The extreme case of this is time.sleep(), which sets the condition to an exact time period to wait. There are some convenience methods provided that help you write code that will wait only as long as required. WebDriverWait in combination with ExpectedCondition is one way this can be accomplished.
       
-            > from selenium.webdriver.support import expected_conditions as EC
-            > wait = WebDriverWait(driver, 10)
-            > element = wait.until(EC.element_to_be_clickable((By.ID, 'someid')))
+            from selenium.webdriver.support import expected_conditions as EC
+            wait = WebDriverWait(driver, 10)
+            element = wait.until(EC.element_to_be_clickable((By.ID, 'someid')))
 
 
   
