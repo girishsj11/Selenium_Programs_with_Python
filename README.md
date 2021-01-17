@@ -1,9 +1,6 @@
-# Selenium_with_Python_Programs
-Using Selenium code with Python to automate the WebBrowser stuffs
-
 # Selenium :
 
-  ***Selenium is a free/open-source automated testing framework to validate a web applications across the different browsers & platofrms. we can create a selenium test code with help of any scripting langauage like python,java, C#,ruby etc...***
+  *Selenium is a free/open-source automated testing framework to validate a web applications across the different browsers & platofrms. we can create a selenium test code with help of any scripting langauage like python,java, C#,ruby etc...*
   
   **List of tools:**
   
@@ -13,9 +10,49 @@ Using Selenium code with Python to automate the WebBrowser stuffs
   4. Selenium Grid
   
   ![Selenium_Tools](https://www.guru99.com/images/SeleniumSuite.png)
+  
+  **Types of Selenium Waits For Page Load:**
+  
+  1. Thread.Sleep() method
+  2. Implicit Wait
+  3. Explicit Wait
+  4. Fluent Wait
+  
+     *Thread.sleep() :*
+     
+      Sleep is a static method that belongs to the thread class. This method can be called using the reference of the class name i.e Thread. If you use Thread.sleep while performing automation testing with Selenium, then this method will stop the execution of the script for the specified duration of time, irrespective of whether the element is found or not on the web page. It accepts the time duration in milliseconds. The syntax for the same is:
+
+            > Thread.sleep(3000);
+         
+     - Selenium Webdriver waits for the specified time, irrespective of the element is found or not. In case the element is found much before the specified duration, the script will still wait for the time duration to elapse, thereby increasing the execution time of the script.
+     
+     - If the element to be present does not appear after a static time and keep changing, then you will never know an estimated time needed for the sleep function. In case it takes more time than the defined time, the script shall throw an error. 
+     
+     - Thread.sleep is intended only for the element it is written prior to. In case you have two to fours elements which need to wait for a certain duration to load, you need to specify Thread.sleep as many times in that case.
+
+     *Implicit Wait() :*
+     
+      - Implicit wait which allows you to halt the WebDriver for a particular period of time until the WebDriver locates a desired element on the web page.
+      
+      - It does not wait for the complete duration of time. In case it finds the element before the duration specified, it moves on to the next line of code execution, thereby reducing the time of script execution. This is why Implicit wait is also referred to as dynamic wait. If it does not find the element in the specified duration, it throws ElementNotVisibleException.
+      
+            > driver.manage().timeouts().implicitlyWait(Time Interval to wait for, TimeUnit.SECONDS);
+            
+     *Explicit Wait() :*
+     
+      - An explicit wait is a code you define to wait for a certain condition to occur before proceeding further in the code. The extreme case of this is time.sleep(), which sets the condition to an exact time period to wait. There are some convenience methods provided that help you write code that will wait only as long as required. WebDriverWait in combination with ExpectedCondition is one way this can be accomplished.
+      
+            > from selenium.webdriver.support import expected_conditions as EC
+            > wait = WebDriverWait(driver, 10)
+            > element = wait.until(EC.element_to_be_clickable((By.ID, 'someid')))
 
 
-## ***Video_database_collection_from_Youtube_using-Selenium-Python***
+  
+  
+## Selenium_with_Python_Programs
+Using Selenium code with Python to automate the WebBrowser stuffs
+
+### ***Video_database_collection_from_Youtube_using-Selenium-Python***
 
 * Prerequisite package installation :
   - pip install db-sqlite3
@@ -52,7 +89,7 @@ Using Selenium code with Python to automate the WebBrowser stuffs
 
 
 
-## ***OnlineDataEntryJob Form Filling Work-Selenium-Python***
+### ***OnlineDataEntryJob Form Filling Work-Selenium-Python***
 
 * Prerequisite package installation :
   - pip install configparser
@@ -82,9 +119,9 @@ Using Selenium code with Python to automate the WebBrowser stuffs
       4. First program will read the contents of table & also keep on adding the data/contens on to the field.
 
 
-## Forward and Backward actions on Web page by using selenium+python
+### Forward and Backward actions on Web page by using selenium+python
 
-### Navigation_Commands on Web browser
+#### Navigation_Commands on Web browser
 
 1. load the packages
 
@@ -106,9 +143,9 @@ Using Selenium code with Python to automate the WebBrowser stuffs
    - Just to checking the history of activity which is stored in the session or not.
 
 
-## Close_And_Quit_Actions onto Web page by using selenium+python
+### Close_And_Quit_Actions onto Web page by using selenium+python
 
-### Basic_Commands on web browser
+#### Basic_Commands on web browser
 
 1. load the packages
 
@@ -138,9 +175,9 @@ Using Selenium code with Python to automate the WebBrowser stuffs
    	
          used to exit the browser, end the session, tabs, pop-ups etc.
 
-## is_displayed() & is_enabled() & is_selected() methods usage on webpage using selenium+python
+### is_displayed() & is_enabled() & is_selected() methods usage on webpage using selenium+python
 
-### Conditional_command Actions
+#### Conditional_command Actions
 
 1. load the packages
 
@@ -175,9 +212,9 @@ Using Selenium code with Python to automate the WebBrowser stuffs
 > The is_selected action verifies if an element is selected right now on the web page and can be executed only on a radio button, options in select, and checkbox  WebElements, When executed on other elements, it will return false.
 
 
-## taking drop down options from Select class which is on Web page by using selenium+python
+### taking drop down options from Select class which is on Web page by using selenium+python
 
-### Select Class example 
+#### Select Class example 
 
 1. load the packages
 
@@ -208,6 +245,6 @@ Using Selenium code with Python to automate the WebBrowser stuffs
          ***Note*** : It will displays the default option too (ex: Select Skills)
          
          
-## webautomation_with_unittest.py
+### webautomation_with_unittest.py
 
   This Program will imports the *unittest* module & runs the programs unit by unit based on the requirement. 
