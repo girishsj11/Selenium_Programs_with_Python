@@ -135,3 +135,113 @@ else:
     print("False")
     
 driver.quit()
+
+
+
+
+#################################################
+
+#Finding the element by its linktext & clicking on it
+
+#################################################
+
+from selenium import webdriver
+
+url = "http://demo.guru99.com/test/link.html"
+
+driver = webdriver.Chrome('./chromedriver')
+
+driver.get(url)
+
+#driver.find_element_by_link_text('click here').click()
+
+elements = driver.find_elements_by_link_text('click here')
+
+#print(len(elements))
+
+#elements[0].click()
+elements[1].click()
+print(driver.title)
+    
+driver.close()
+
+
+################################################
+
+#Finding the element by its partial linktext & clicking on it
+
+################################################
+
+from selenium import webdriver
+
+url = "http://demo.guru99.com/test/link.html"
+
+driver = webdriver.Chrome('./chromedriver')
+
+driver.get(url)
+
+elements = driver.find_elements_by_partial_link_text('here')
+
+#print(len(elements))
+
+#elements[0].click()
+elements[1].click()
+print(driver.title)
+    
+driver.close()
+
+
+###############################################
+
+#Finding the element by its linktext & clicking on it with help of ActionChain class
+
+###############################################
+
+from selenium import webdriver
+from selenium.webdriver.common.action_chains import ActionChains
+
+url = "http://demo.guru99.com/test/link.html"
+
+driver = webdriver.Chrome('./chromedriver')
+action = ActionChains(driver)
+
+driver.get(url)
+
+
+#driver.find_element_by_link_text('click here').click()
+
+elements = driver.find_elements_by_link_text('click here')
+
+#action = ActionChains(driver)
+
+action.click(elements[0]).perform()
+
+print(driver.title)
+
+driver.quit()
+
+
+###############################################
+
+#different actions on single element by using action chains class
+
+###############################################
+
+from selenium import webdriver
+from selenium.webdriver.common.action_chains import ActionChains
+from time import sleep
+
+url = "https://www.facebook.com/login/identify?ctx=recover"
+
+driver = webdriver.Chrome('./chromedriver')
+
+driver.get(url)
+
+element = driver.find_element_by_id("identify_email")
+
+actions = ActionChains(driver)
+
+actions.click(element).send_keys('12345').double_click(element).context_click(element).perform()
+sleep(4)
+
+driver.quit()
