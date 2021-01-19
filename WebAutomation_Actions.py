@@ -107,3 +107,31 @@ for _ in range(len(elements)):
     print(elements[_].text)
     
 driver.close()
+
+
+
+##############################################
+
+#Clicking on image & finding its locator by css class selector
+
+#############################################
+
+
+from selenium import webdriver
+
+url = "https://www.facebook.com/login/identify?ctx=recover"
+
+driver = webdriver.Chrome('./chromedriver')
+
+driver.get(url)
+
+driver.find_element_by_css_selector('a[title="Go to Facebook home"]').click()
+
+#print(driver.title)
+
+if (driver.title == "Facebook – log in or sign up"):
+    print("True")
+else:
+    print("False")
+    
+driver.quit()
