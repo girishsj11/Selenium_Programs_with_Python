@@ -245,3 +245,30 @@ actions.click(element).send_keys('12345').double_click(element).context_click(el
 sleep(4)
 
 driver.quit()
+
+
+
+###############################################
+
+#adding coockies to webpage
+
+###############################################
+
+from selenium import webdriver
+from time import sleep
+
+  
+# create webdriver object 
+driver = webdriver.Firefox(executable_path='./geckodriver')
+  
+# get geeksforgeeks.org 
+driver.get("https://www.google.com/") 
+  
+# add_cookie method driver 
+driver.add_cookie({"name" : "Function_name", "value" : "Function_value"}) 
+
+sleep(5)
+
+print(driver.title)
+
+driver.close()
