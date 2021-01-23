@@ -294,5 +294,7 @@ element = driver.find_element_by_name("q")
 
 print("\nx & Y co-ordination values : ",element.location)
 print("\nSize of an element in webpage : ",element.size)
+print("or")
+print(element.rect)
 
 driver.close()
