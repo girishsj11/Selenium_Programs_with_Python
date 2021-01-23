@@ -250,7 +250,7 @@ driver.quit()
 
 ###############################################
 
-#adding coockies to webpage
+#adding coockies to webpage by using firefox in linux machine
 
 ###############################################
 
@@ -265,10 +265,12 @@ driver = webdriver.Firefox(executable_path='./geckodriver')
 driver.get("https://www.google.com/") 
   
 # add_cookie method driver 
+print("\nBefore adding user defined cookie : ",driver.get_cookies())
 driver.add_cookie({"name" : "Function_name", "value" : "Function_value"}) 
+print("\nAfter adding user defined cookie : ",driver.get_cookies())
 
 sleep(5)
 
-print(driver.title)
+print("\nDriver title : ",driver.title)
 
 driver.close()
