@@ -274,3 +274,25 @@ sleep(5)
 print("\nDriver title : ",driver.title)
 
 driver.close()
+
+
+###############################################
+
+#finding size & its loaction of an element located 
+
+###############################################
+
+from selenium import webdriver
+
+# create webdriver object 
+driver = webdriver.Firefox(executable_path='./geckodriver')
+  
+# get geeksforgeeks.org 
+driver.get("https://www.google.com/") 
+  
+element = driver.find_element_by_name("q")
+
+print("\nx & Y co-ordination values : ",element.location)
+print("\nSize of an element in webpage : ",element.size)
+
+driver.close()
