@@ -137,6 +137,32 @@ else:
 driver.quit()
 
 
+##############################################
+
+#Clicking & finding the locator by css class selector by an id of an element as a parameter
+
+#############################################
+
+
+from selenium import webdriver
+from time import sleep
+
+url = 'https://www.facebook.com/' 
+
+driver = webdriver.Chrome('./chromedriver')
+
+driver.get(url)
+
+email = driver.find_element_by_css_selector('#email')
+
+email.click()
+
+email.send_keys('1234@gmail.com')
+
+sleep(2)
+
+driver.close()
+
 
 
 #################################################
